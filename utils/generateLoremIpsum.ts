@@ -1,0 +1,4 @@
+export default function generateLoremIpsum(charLimit: number = 200) {
+    const loremIpsumText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id massa quam. Curabitur ut ipsum sed est varius dapibus at a metus. Nulla facilisi. Sed sed odio condimentum, tincidunt lorem sed, semper quam. Donec nec ante sit amet odio vulputate interdum. Aliquam erat volutpat. Etiam feugiat ex et leo egestas, at finibus ex fringilla. Aliquam facilisis, justo sed efficitur tincidunt, tortor orci vestibulum mi, eget laoreet turpis elit ac felis. Vivamus rhoncus quam sit amet lacinia viverra. Suspendisse semper eleifend eros id lobortis.";
+    return loremIpsumText.substr(0, charLimit) + "...";
+}
