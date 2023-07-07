@@ -13,6 +13,7 @@ function Divider() {
 function InfoRow(props: {
     src: string,
     title: string,
+    children: React.ReactNode
 }) {
     return <div className={'flex items-center gap-2 self-stretch'}>
         <div className={'w-8 h-8 shrink-0 rounded-full bg-[#2E2E48]'}>

@@ -6,7 +6,7 @@ import {useDisclosure} from "@chakra-ui/hooks";
 
 export default function Topbar() {
     const {isOpen, onOpen, onClose} = useDisclosure()
-    const btnRef = React.useRef()
+    const btnRef = React.useRef(null)
 
     return <div className={'bg-sidebar p-2 grow'}>
         <button

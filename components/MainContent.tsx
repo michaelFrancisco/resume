@@ -1,6 +1,6 @@
 import React from 'react';
 
-function MainContent(props) {
+function MainContent() {
     return (
         <div className="w-[418px] h-[842px] pl-4 pr-6 py-8 justify-start items-start inline-flex">
             <div className="grow shrink basis-0 flex-col justify-start items-start inline-flex">
