@@ -1,8 +1,7 @@
 "use client"
 import React from "react";
 import Sidebar from "@/components/Sidebar";
-import {Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerOverlay} from "@chakra-ui/modal";
-import {useDisclosure} from "@chakra-ui/hooks";
+import {Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerOverlay, useDisclosure} from "@chakra-ui/react";
 
 export default function Topbar() {
     const {isOpen, onOpen, onClose} = useDisclosure()
