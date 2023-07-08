@@ -7,7 +7,7 @@ export default function Topbar() {
     const {isOpen, onOpen, onClose} = useDisclosure()
     const btnRef = React.useRef(null)
 
-    return <div className={'bg-sidebar p-2 grow'}>
+    return <div className={'flex flex-row bg-accent p-2 grow'}>
         <button
             className="block md:hidden"
             ref={btnRef}
@@ -28,6 +28,12 @@ export default function Topbar() {
                 />
             </svg>
         </button>
+        <div className={'grow text-center'}>
+            <div className={'flex flex-col'}>
+                <div className={'text-xs'}>Michael Francisco</div>
+                <div className={'text-[0.5rem]'}>Software Developer</div>
+            </div>
+        </div>
         <Drawer
             isOpen={isOpen}
             placement={'left'}

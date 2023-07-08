@@ -6,19 +6,19 @@ import Providers from "@/app/providers";
 export default function Home() {
     return (
         <Providers>
-            <main className={'flex flex-col h-screen w-screen overflow-x-hidden'}>
-                <div className={'flex md:hidden'}>
+            <div className={'flex flex-col px-0 lg:px-80 items-center h-screen w-screen overflow-x-hidden'}>
+                <div className={'fixed flex md:hidden w-full'}>
                     <Topbar/>
                 </div>
                 <div className={'flex flex-row grow'}>
-                    <div className={'hidden md:flex w-72'}>
+                    <div className={'hidden h-screen sticky top-0 md:flex w-72'}>
                         <Sidebar/>
                     </div>
-                    <div className={'flex flex-grow'}>
+                    <main className={'flex md:pt-0 pt-6'}>
                         <MainContent/>
-                    </div>
+                    </main>
                 </div>
-            </main>
+            </div>
         </Providers>
     )
 }
