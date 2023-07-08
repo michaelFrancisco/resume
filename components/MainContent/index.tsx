@@ -1,4 +1,5 @@
 import React from 'react';
+import {Divider} from "@/components/Sidebar/Divider";
 
 function Timeline() {
     return <div className="flex flex-col items-center justify-start self-stretch pt-0.5">
@@ -16,8 +17,8 @@ function Experience() {
             <div className="flex gap-2 self-stretch items-center pb-2">
                 <img className={'h-8 w-8 rounded shadow'} src={'ov.png'} alt={'ov'}/>
                 <div className="flex flex-col">
-                    <div className="text-sm">Senior Software Engineer</div>
-                    <div className="text-sm">Oost & Voort Inc.</div>
+                    <div className="text-xs">Senior Software Engineer</div>
+                    <a href={'https://oostvoort.com/'} className="text-sm text-link">Oost & Voort Inc.</a>
                 </div>
             </div>
             <div className="grow text-gray-400 text-xs">
@@ -60,7 +61,7 @@ function SkillCard(props: {
 }) {
     return <div
         className="flex flex-col items-center justify-center gap-2 rounded-md bg-accent p-2">
-        <img alt={props.src} className="h-16 w-16 rounded" src={props.src ?? "https://via.placeholder.com/24x24"}/>
+        <img alt={props.src} className="h-14 w-14 md:h-16 md:w-16 rounded" src={props.src ?? "https://via.placeholder.com/24x24"}/>
         <div className="flex flex-col items-center justify-center gap-[1px]">
             <div className="text-xs">{props.title ?? "Title"}</div>
         </div>
@@ -111,7 +112,7 @@ function Skills() {
 }
 
 function Content(props: {
-    title: string,
+    title?: string,
     children: React.ReactNode
 }) {
     return <div className="flex flex-row gap-4">
@@ -129,7 +130,7 @@ function Tool(props: {
     children: React.ReactNode
 }) {
     return <div className="flex flex-row gap-2 rounded-md bg-accent p-3 items-center">
-        <img className="h-24 w-24 rounded" src={props.src} alt={"pc"}/>
+        <img className="h-16 w-16 md:h-24 md:w-24 rounded" src={props.src} alt={"pc"}/>
         <div
             className="flex flex-col gap-0.5">
             <div
@@ -157,7 +158,7 @@ function Tools() {
             <ul>
                 <li>&#8226; Fully licensed</li>
                 <li>&#8226; Excellent proficiency</li>
-                <li>&#8226; Considerably improves productivity when developing Javascript based projects</li>
+                <li>&#8226; Considerably improves productivity when developing web based projects</li>
             </ul>
         </Tool>
         <Tool title={'Fast Internet Connection'} src={'internet.png'}>
@@ -174,6 +175,15 @@ function Tools() {
 function MainContent() {
     return (
         <div className="flex h-full p-8 bg-main flex-col gap-8">
+            <Content title={'Michael Francisco'}>
+                <div className={'flex flex-col gap-6 text-[0.75rem] text-gray-300'}>
+                    <p>
+                        Experienced full-stack developer adept in a broad range of skills like Web
+                        development, Backend services, DevOps, and Agile project management.
+                    </p>
+                </div>
+            </Content>
+
             <Content title={'Experience'}>
                 <Experience/>
             </Content>
@@ -185,6 +195,24 @@ function MainContent() {
             <Content title={'Tools'}>
                 <Tools/>
             </Content>
+
+                <div className={'flex flex-col gap-4 text-xs'}>
+                    <div className={'flex flex-row gap-2 justify-center'}>
+                        <img src={'nextjs_full.png'} className={'h-auto w-24'} alt={'nextjs'}/>
+                        <img src={'netlify_full.png'} className={'h-auto w-24'} alt={'netlify'}/>
+                    </div>
+                    <p>This online resume was built using <b>Next.js</b> and is hosted on <b>Netlify</b>.</p>
+                    <p>Design inspired by Supa Resume by <a href={'https://linktr.ee/angelolibero_designs'}
+                                                            className={'text-link'}>@angelolibero</a>, <a
+                        href={'https://www.figma.com/community/file/1087586245868299560/Supa-Resume---Light-%26-Dark-%5BFREE-Resume%2FCover-Letter%5D'}
+                        className={'text-link'}>available
+                        for free on Figma</a></p>
+                    <p>You can find the complete source code on my GitHub repository. <a
+                        href={'https://github.com/michaelFrancisco/resume'} className={'text-link'}>Feel free to check
+                        it out!</a></p>
+                </div>
+
+
         </div>
     );
 }

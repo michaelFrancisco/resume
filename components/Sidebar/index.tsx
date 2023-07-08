@@ -31,33 +31,6 @@ export function Sidebar() {
                     <a className={'text-link'} href={`tel:+639998933401`}>(+63) 999 8933 401</a>
                 </InfoRow>
             </div>
-
-            <Divider/>
-
-            <div className={'flex flex-col gap-6 text-[0.75rem] text-gray-300'}>
-                <p>
-                    Experienced full-stack developer adept in a broad range of skills like Web
-                    development, Backend services, DevOps, and Agile project management.
-                </p>
-
-                <Divider/>
-
-                <div className={'flex flex-col gap-4'}>
-                    <div className={'flex flex-row gap-2 justify-center'}>
-                        <img src={'nextjs_full.png'} className={'h-auto w-24'} alt={'nextjs'}/>
-                        <img src={'netlify_full.png'} className={'h-auto w-24'} alt={'netlify'}/>
-                    </div>
-                    <p>This online resume was built using <b>Next.js</b> and is hosted on <b>Netlify</b>.</p>
-                    <p>Design inspired by Supa Resume by <a href={'https://linktr.ee/angelolibero_designs'}
-                                                            className={'text-link'}>@angelolibero</a>, <a
-                        href={'https://www.figma.com/community/file/1087586245868299560/Supa-Resume---Light-%26-Dark-%5BFREE-Resume%2FCover-Letter%5D'}
-                        className={'text-link'}>available
-                        for free on Figma</a></p>
-                    <p>You can find the complete source code on my GitHub repository. <a
-                        href={'https://github.com/michaelFrancisco/resume'} className={'text-link'}>Feel free to check
-                        it out!</a></p>
-                </div>
-            </div>
         </div>
     </div>
         ;

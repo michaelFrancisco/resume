@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors:{
+        'link': "#95AAFB"
+      },
       backgroundColor: {
         'accent': "#2E2E48",
         'main': "#232339",
