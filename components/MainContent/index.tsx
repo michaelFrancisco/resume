@@ -1,10 +1,9 @@
 import React from 'react';
-import generateLoremIpsum from "@/utils/generateLoremIpsum";
 
 function Timeline() {
     return <div className="flex flex-col items-center justify-start self-stretch pt-0.5">
         <div className="h-6 w-6 bg-accent shadow rounded-full">
-            <div className={'rounded-full h-2 w-2 bg-[#C696FC] m-[8px]'}/>
+            <div className={'rounded-full h-2 w-2 bg-[#C696FC] m-[9.5px]'}/>
         </div>
         <div className="border-[1px] border-[#2E2E48] h-full"/>
     </div>;
@@ -12,9 +11,9 @@ function Timeline() {
 
 function Experience() {
     return <div className="flex grow gap-1 self-stretch">
-        <div className="flex flex-col gap-1 rounded pr-2">
+        <div className="flex flex-col gap-2 rounded pr-2">
             <div className="text-xs"> 2020 - 2023</div>
-            <div className="flex gap-2 self-stretch items-center">
+            <div className="flex gap-2 self-stretch items-center pb-2">
                 <img className={'h-8 w-8 rounded shadow'} src={'ov.png'} alt={'ov'}/>
                 <div className="flex flex-col">
                     <div className="text-sm">Senior Software Engineer</div>
@@ -22,27 +21,34 @@ function Experience() {
                 </div>
             </div>
             <div className="grow text-gray-400 text-xs">
-                <ul>
-                    <li>&#8226; Led development of a learning management system with 500+ users across 7+ branches,
-                        handling fullstack programming, server deployment, CI/CD, and client coordination.
-                    </li>
-                    <li>&#8226; Created an internal web-based video conferencing solution used by the company as an
+                <div className={'flex flex-col gap-y-2'}>
+                    <p>&#8226; Led development of a learning management system with <b>500+ users</b> across <b>7+
+                        branches</b>,
+                        handling <b>fullstack programming</b>, <b>server deployment</b>, <b>CI/CD</b>, and <b>client
+                            coordination</b>.
+                    </p>
+                    <p>&#8226; Created an <b>internal web-based video conferencing solution</b> used by the company as
+                        an
                         alternative to Google Meet and Zoom.
-                    </li>
-                    <li>&#8226; Worked as tech lead and project manager for multiple blockchain projects with the most
-                        successful one reaching a TVL of over $100M.
-                    </li>
-                    <li>&#8226; Headed Agile Project Management operations, setting standards, mentoring teams, and
+                    </p>
+                    <p>&#8226; Worked as <b>tech lead</b> and <b>project manager</b> for multiple blockchain projects
+                        with the most
+                        successful one reaching a <b>TVL of over $100M</b>.
+                    </p>
+                    <p>&#8226; Headed <b>Agile Project Management operations</b>, setting standards, mentoring teams,
+                        and
                         collaborating with management to establish company-wide policies and structures.
-                    </li>
-                    <li>&#8226; Led the development of an online 3D marketplace, coordinating components, negotiating
-                        with the client, and spearheading research and implementation of new technologies.
-                    </li>
-                    <li>&#8226; Led research and development projects focused on Rust as a backend solution, creating an
-                        integrated time tracking and task management system, an improved video conferencing solution,
-                        and a blazingly fast blockchain tool for dApp development.
-                    </li>
-                </ul>
+                    </p>
+                    <p>&#8226; Led the development of an online 3D marketplace, <b>coordinating components</b>, <b>negotiating
+                        with the client</b>, and <b>spearheading research and implementation</b> of new technologies.
+                    </p>
+                    <p>&#8226; Led research and development projects focused on <b>Rust as a backend solution</b>,
+                        creating an
+                        <b>integrated time tracking and task management system</b>, an <b>improved video conferencing
+                            solution</b>,
+                        and a <b>blazingly fast blockchain tool for dApp development</b>.
+                    </p>
+                </div>
             </div>
         </div>
     </div>
@@ -110,7 +116,7 @@ function Content(props: {
 }) {
     return <div className="flex flex-row gap-4">
         <Timeline/>
-        <div className="flex grow flex-col gap-2">
+        <div className="flex grow flex-col gap-2 gap-x-10">
             <div className="text-lg">{props.title}</div>
             {props.children}
         </div>
@@ -119,7 +125,7 @@ function Content(props: {
 
 function Tool(props: {
     src: string,
-    title:string,
+    title: string,
     children: React.ReactNode
 }) {
     return <div className="flex flex-row gap-2 rounded-md bg-accent p-3 items-center">
@@ -156,7 +162,7 @@ function Tools() {
         </Tool>
         <Tool title={'Fast Internet Connection'} src={'internet.png'}>
             <ul>
-                <li>&#8226; Up to 100Mbps</li>
+                <li>&#8226; Up to and usually 100Mbps</li>
                 <li>&#8226; 80% minimum guaranteed speed</li>
                 <li>&#8226; No monthly data cap</li>
                 <li>&#8226; 99% Uptime with multiple backups and redundancies</li>
@@ -167,7 +173,7 @@ function Tools() {
 
 function MainContent() {
     return (
-        <div className="flex h-full p-8 bg-main flex-col gap-4">
+        <div className="flex h-full p-8 bg-main flex-col gap-8">
             <Content title={'Experience'}>
                 <Experience/>
             </Content>
@@ -179,196 +185,6 @@ function MainContent() {
             <Content title={'Tools'}>
                 <Tools/>
             </Content>
-
-
-            {/*<div className="flex items-start justify-center gap-4 self-stretch">*/}
-            {/*    <div className="flex flex-col items-center justify-start self-stretch">*/}
-            {/*        <div className="relative h-4 w-4 bg-slate-800 shadow shadow-inner rounded-[100px]">*/}
-            {/*            <div className="absolute top-0 left-0 h-4 w-4 bg-slate-800"/>*/}
-            {/*            <div className="absolute w-2.5 h-2.5 left-[3px] top-[3px]"/>*/}
-            {/*        </div>*/}
-            {/*        <div className="relative w-[0.50px] h-[101px]">*/}
-            {/*            <div*/}
-            {/*                className="absolute top-0 left-0 border border-slate-800 w-[0.50px] h-[101px]"/>*/}
-            {/*        </div>*/}
-            {/*    </div>*/}
-            {/*    <div className="flex shrink grow basis-0 flex-col items-start justify-start gap-4 pb-6">*/}
-            {/*        <div*/}
-            {/*            className="text-center font-medium leading-none tracking-wide text-slate-200 text-[12px]">Education*/}
-            {/*        </div>*/}
-            {/*        <div className="flex flex-col items-start justify-start gap-1 self-stretch h-[61px]">*/}
-            {/*            <div className="flex items-start justify-start gap-1 self-stretch">*/}
-            {/*                <div*/}
-            {/*                    className="flex shrink grow basis-0 flex-col items-center justify-center gap-1 rounded-tl rounded-bl bg-slate-800 p-2">*/}
-            {/*                    <div className="flex items-center justify-start gap-2 self-stretch">*/}
-            {/*                        <img className="h-6 w-6 rounded" src="https://via.placeholder.com/24x24"/>*/}
-            {/*                        <div className="font-medium leading-3 text-slate-200 text-[6px]">Memorisely*/}
-            {/*                        </div>*/}
-            {/*                    </div>*/}
-            {/*                    <div*/}
-            {/*                        className="flex flex-col items-start justify-center self-stretch h-[17px] gap-[1px]">*/}
-            {/*                        <div*/}
-            {/*                            className="self-stretch font-medium leading-3 text-slate-200 text-[7px]">Build*/}
-            {/*                            a design system*/}
-            {/*                        </div>*/}
-            {/*                        <div*/}
-            {/*                            className="text-center font-normal tracking-wide text-gray-400 text-[5px]">Oct*/}
-            {/*                            2021*/}
-            {/*                        </div>*/}
-            {/*                    </div>*/}
-            {/*                </div>*/}
-            {/*                <div*/}
-            {/*                    className="flex shrink grow basis-0 flex-col items-center justify-center gap-1 bg-slate-800 p-2">*/}
-            {/*                    <div className="flex items-center justify-start gap-2 self-stretch">*/}
-            {/*                        <img className="h-6 w-6 rounded" src="https://via.placeholder.com/24x24"/>*/}
-            {/*                        <div className="font-medium leading-3 text-slate-200 text-[6px]">UX acadamy*/}
-            {/*                        </div>*/}
-            {/*                    </div>*/}
-            {/*                    <div*/}
-            {/*                        className="flex flex-col items-start justify-center self-stretch h-[17px] gap-[1px]">*/}
-            {/*                        <div className="self-stretch font-medium leading-3 text-slate-200 text-[7px]">UX*/}
-            {/*                            Design certificate*/}
-            {/*                        </div>*/}
-            {/*                        <div*/}
-            {/*                            className="text-center font-normal tracking-wide text-gray-400 text-[5px]">Feb*/}
-            {/*                            2020*/}
-            {/*                        </div>*/}
-            {/*                    </div>*/}
-            {/*                </div>*/}
-            {/*                <div*/}
-            {/*                    className="flex shrink grow basis-0 flex-col items-center justify-center gap-1 rounded-tr rounded-br bg-slate-800 p-2">*/}
-            {/*                    <div className="flex items-center justify-start gap-2 self-stretch">*/}
-            {/*                        <img className="h-6 w-6 rounded" src="https://via.placeholder.com/24x24"/>*/}
-            {/*                        <div className="font-medium leading-3 text-slate-200 text-[6px]">Coursera</div>*/}
-            {/*                    </div>*/}
-            {/*                    <div*/}
-            {/*                        className="flex flex-col items-start justify-center self-stretch h-[17px] gap-[1px]">*/}
-            {/*                        <div*/}
-            {/*                            className="self-stretch font-medium leading-3 text-slate-200 text-[7px]">Usera*/}
-            {/*                            research course*/}
-            {/*                        </div>*/}
-            {/*                        <div*/}
-            {/*                            className="text-center font-normal tracking-wide text-gray-400 text-[5px]">Dec*/}
-            {/*                            2019*/}
-            {/*                        </div>*/}
-            {/*                    </div>*/}
-            {/*                </div>*/}
-            {/*            </div>*/}
-            {/*        </div>*/}
-            {/*    </div>*/}
-            {/*</div>*/}
-            {/*<div className="flex items-start justify-center gap-4 self-stretch">*/}
-            {/*    <div className="flex flex-col items-center justify-start self-stretch">*/}
-            {/*        <div className="relative h-4 w-4 bg-slate-800 shadow shadow-inner rounded-[100px]">*/}
-            {/*            <div className="absolute top-0 left-0 h-4 w-4 bg-slate-800"/>*/}
-            {/*            <div className="absolute w-2.5 h-2.5 left-[3px] top-[3px]"/>*/}
-            {/*        </div>*/}
-            {/*    </div>*/}
-            {/*    <div className="flex shrink grow basis-0 flex-col items-start justify-start gap-4 pb-6">*/}
-            {/*        <div*/}
-            {/*            className="text-center font-medium leading-none tracking-wide text-slate-200 text-[12px]">Tools*/}
-            {/*        </div>*/}
-            {/*        <div className="flex flex-col items-start justify-start gap-1 self-stretch h-[124px]">*/}
-            {/*            <div className="flex items-start justify-start gap-1 self-stretch">*/}
-            {/*                <div*/}
-            {/*                    className="flex h-16 shrink grow basis-0 flex-col items-center justify-center gap-1 rounded-tl bg-slate-800 p-2">*/}
-            {/*                    <img className="h-6 w-6 rounded" src="https://via.placeholder.com/24x24"/>*/}
-            {/*                    <div className="flex flex-col items-center justify-center gap-[1px]">*/}
-            {/*                        <div className="font-medium leading-3 text-slate-200 text-[7px]">Figma</div>*/}
-            {/*                        <div*/}
-            {/*                            className="text-center font-normal tracking-wide text-gray-400 text-[5px]"> UI*/}
-            {/*                            Design, prototyping*/}
-            {/*                        </div>*/}
-            {/*                    </div>*/}
-            {/*                </div>*/}
-            {/*                <div*/}
-            {/*                    className="flex h-16 shrink grow basis-0 flex-col items-center justify-center gap-1 bg-slate-800 p-2">*/}
-            {/*                    <img className="h-6 w-6 rounded" src="https://via.placeholder.com/24x24"/>*/}
-            {/*                    <div className="flex flex-col items-center justify-center gap-[1px]">*/}
-            {/*                        <div className="font-medium leading-3 text-slate-200 text-[7px]">Maze</div>*/}
-            {/*                        <div className="font-normal tracking-wide text-gray-400 text-[5px]">Product*/}
-            {/*                            research*/}
-            {/*                        </div>*/}
-            {/*                    </div>*/}
-            {/*                </div>*/}
-            {/*                <div*/}
-            {/*                    className="flex h-16 shrink grow basis-0 flex-col items-center justify-center gap-1 bg-slate-800 p-2">*/}
-            {/*                    <img*/}
-            {/*                        className="h-6 w-6 border border-slate-600 rounded-[100px]"*/}
-            {/*                        src="https://via.placeholder.com/24x24"/>*/}
-            {/*                    <div className="flex flex-col items-center justify-center gap-[1px]">*/}
-            {/*                        <div className="font-medium leading-3 text-slate-200 text-[7px]">Spline</div>*/}
-            {/*                        <div className="font-normal tracking-wide text-gray-400 text-[5px]">3D design*/}
-            {/*                        </div>*/}
-            {/*                    </div>*/}
-            {/*                </div>*/}
-            {/*                <div*/}
-            {/*                    className="flex h-16 shrink grow basis-0 flex-col items-center justify-center gap-1 rounded-tr bg-slate-800 p-2">*/}
-            {/*                    <img className="h-6 w-6" src="https://via.placeholder.com/24x24"/>*/}
-            {/*                    <div className="flex flex-col items-center justify-center gap-[1px]">*/}
-            {/*                        <div className="font-medium leading-3 text-slate-200 text-[7px]">Zeplin</div>*/}
-            {/*                        <div className="font-normal tracking-wide text-gray-400 text-[5px]">Design*/}
-            {/*                            workspace*/}
-            {/*                        </div>*/}
-            {/*                    </div>*/}
-            {/*                </div>*/}
-            {/*            </div>*/}
-            {/*            <div className="flex items-start justify-start gap-1 self-stretch">*/}
-            {/*                <div*/}
-            {/*                    className="flex h-14 shrink grow basis-0 flex-col items-center justify-center gap-1 rounded-bl bg-slate-800 p-2">*/}
-            {/*                    <img className="h-4 w-4 rounded-[100px]" src="https://via.placeholder.com/16x16"/>*/}
-            {/*                    <div className="flex flex-col items-center justify-center gap-[1px]">*/}
-            {/*                        <div className="font-medium leading-3 text-slate-200 text-[7px]">Vectornator*/}
-            {/*                        </div>*/}
-            {/*                        <div className="font-normal tracking-wide text-gray-400 text-[5px]">Graphic*/}
-            {/*                            design*/}
-            {/*                        </div>*/}
-            {/*                    </div>*/}
-            {/*                </div>*/}
-            {/*                <div*/}
-            {/*                    className="flex h-14 shrink grow basis-0 flex-col items-center justify-center gap-1 bg-slate-800 p-2">*/}
-            {/*                    <img className="h-4 w-4 rounded-[100px]" src="https://via.placeholder.com/16x16"/>*/}
-            {/*                    <div className="flex flex-col items-center justify-center gap-[1px]">*/}
-            {/*                        <div className="font-medium leading-3 text-slate-200 text-[7px]">Rotato</div>*/}
-            {/*                        <div className="font-normal tracking-wide text-gray-400 text-[5px]">Mockups*/}
-            {/*                        </div>*/}
-            {/*                    </div>*/}
-            {/*                </div>*/}
-            {/*                <div*/}
-            {/*                    className="flex h-14 shrink grow basis-0 flex-col items-center justify-center gap-1 bg-slate-800 p-2">*/}
-            {/*                    <img className="h-4 w-4 rounded-[100px]" src="https://via.placeholder.com/16x16"/>*/}
-            {/*                    <div className="flex flex-col items-center justify-center gap-0.5">*/}
-            {/*                        <div className="font-medium leading-3 text-slate-200 text-[7px]">VS Code</div>*/}
-            {/*                        <div*/}
-            {/*                            className="font-normal leading-3 tracking-wide text-gray-400 text-[6px]">Code*/}
-            {/*                            editor*/}
-            {/*                        </div>*/}
-            {/*                    </div>*/}
-            {/*                </div>*/}
-            {/*                <div*/}
-            {/*                    className="flex h-14 shrink grow basis-0 flex-col items-center justify-center gap-1 bg-slate-800 p-2">*/}
-            {/*                    <img className="h-4 w-4 rounded-[100px]" src="https://via.placeholder.com/16x16"/>*/}
-            {/*                    <div className="flex flex-col items-center justify-center gap-[1px]">*/}
-            {/*                        <div className="font-medium leading-3 text-slate-200 text-[7px]">Xcode</div>*/}
-            {/*                        <div className="font-normal tracking-wide text-gray-400 text-[5px]">iOS*/}
-            {/*                            development*/}
-            {/*                        </div>*/}
-            {/*                    </div>*/}
-            {/*                </div>*/}
-            {/*                <div*/}
-            {/*                    className="flex h-14 shrink grow basis-0 flex-col items-center justify-center gap-1 rounded-br bg-slate-800 p-2">*/}
-            {/*                    <img className="h-4 w-4 rounded-[100px]" src="https://via.placeholder.com/16x16"/>*/}
-            {/*                    <div className="flex flex-col items-center justify-center gap-[1px]">*/}
-            {/*                        <div className="font-medium leading-3 text-slate-200 text-[7px]">Notion</div>*/}
-            {/*                        <div className="font-normal tracking-wide text-gray-400 text-[5px]">Project*/}
-            {/*                            managment*/}
-            {/*                        </div>*/}
-            {/*                    </div>*/}
-            {/*                </div>*/}
-            {/*            </div>*/}
-            {/*        </div>*/}
-            {/*    </div>*/}
-            {/*</div>*/}
         </div>
     );
 }
