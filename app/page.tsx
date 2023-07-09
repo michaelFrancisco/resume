@@ -5,8 +5,7 @@ import Providers from "@/app/providers";
 
 export default function Home() {
     return (
-        <Providers>
-            <div className={'flex justify-center'}>
+            <div className={'dark flex justify-center'}>
                 <div className={'flex flex-col max-w-4xl items-center h-screen w-screen overflow-x-hidden'}>
                     <div className={'flex flex-row grow'}>
                         <div className={'fixed flex md:hidden w-full'}>
@@ -21,6 +20,5 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-        </Providers>
     )
 }

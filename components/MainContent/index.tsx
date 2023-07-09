@@ -1,5 +1,4 @@
 import React from 'react';
-import {Divider} from "@/components/Sidebar/Divider";
 
 function Timeline() {
     return <div className="flex flex-col items-center justify-start self-stretch pt-0.5">
@@ -24,30 +23,21 @@ function Experience() {
             <div className="grow text-gray-400 text-xs">
                 <div className={'flex flex-col gap-y-2'}>
                     <p>&#8226; Led development of a learning management system with <b>500+ users</b> across <b>7+
-                        branches</b>,
-                        handling <b>fullstack programming</b>, <b>server deployment</b>, <b>CI/CD</b>, and <b>client
-                            coordination</b>.
-                    </p>
+                        branches</b>, handling <b>fullstack programming</b>, <b>server deployment</b>, <b>CI/CD</b>,
+                        and <b>client coordination</b>.</p>
                     <p>&#8226; Created an <b>internal web-based video conferencing solution</b> used by the company as
-                        an
-                        alternative to Google Meet and Zoom.
-                    </p>
+                        an alternative to Google Meet and Zoom.</p>
                     <p>&#8226; Worked as <b>tech lead</b> and <b>project manager</b> for multiple blockchain projects
-                        with the most
-                        successful one reaching a <b>TVL of over $100M</b>.
-                    </p>
+                        with the most successful one reaching a <b>TVL of over $100M</b>.</p>
                     <p>&#8226; Headed <b>Agile Project Management operations</b>, setting standards, mentoring teams,
-                        and
-                        collaborating with management to establish company-wide policies and structures.
+                        and collaborating with management to establish company-wide policies and structures.
                     </p>
                     <p>&#8226; Led the development of an online 3D marketplace, <b>coordinating components</b>, <b>negotiating
                         with the client</b>, and <b>spearheading research and implementation</b> of new technologies.
                     </p>
                     <p>&#8226; Led research and development projects focused on <b>Rust as a backend solution</b>,
-                        creating an
-                        <b>integrated time tracking and task management system</b>, an <b>improved video conferencing
-                            solution</b>,
-                        and a <b>blazingly fast blockchain tool for dApp development</b>.
+                        creating an <b>integrated time tracking and task management system</b>, an <b>improved video
+                            conferencing solution</b>, and a <b>blazingly fast blockchain tool for dApp development</b>.
                     </p>
                 </div>
             </div>
@@ -61,7 +51,8 @@ function SkillCard(props: {
 }) {
     return <div
         className="flex flex-col items-center justify-center gap-2 rounded-md bg-accent p-2">
-        <img alt={props.src} className="h-14 w-14 md:h-16 md:w-16 rounded" src={props.src ?? "https://via.placeholder.com/24x24"}/>
+        <img alt={props.src} className="h-14 w-14 md:h-16 md:w-16 rounded"
+             src={props.src ?? "https://via.placeholder.com/24x24"}/>
         <div className="flex flex-col items-center justify-center gap-[1px]">
             <div className="text-xs">{props.title ?? "Title"}</div>
         </div>
@@ -196,21 +187,21 @@ function MainContent() {
                 <Tools/>
             </Content>
 
-                <div className={'flex flex-col gap-4 text-xs'}>
-                    <div className={'flex flex-row gap-2 justify-center'}>
-                        <img src={'nextjs_full.png'} className={'h-auto w-24'} alt={'nextjs'}/>
-                        <img src={'netlify_full.png'} className={'h-auto w-24'} alt={'netlify'}/>
-                    </div>
-                    <p>This online resume was built using <b>Next.js</b> and is hosted on <b>Netlify</b>.</p>
-                    <p>Design inspired by Supa Resume by <a href={'https://linktr.ee/angelolibero_designs'}
-                                                            className={'text-link'}>@angelolibero</a>, <a
-                        href={'https://www.figma.com/community/file/1087586245868299560/Supa-Resume---Light-%26-Dark-%5BFREE-Resume%2FCover-Letter%5D'}
-                        className={'text-link'}>available
-                        for free on Figma</a></p>
-                    <p>You can find the complete source code on my GitHub repository. <a
-                        href={'https://github.com/michaelFrancisco/resume'} className={'text-link'}>Feel free to check
-                        it out!</a></p>
+            <div className={'flex flex-col gap-1 text-xs text-slate-500 text-center'}>
+                <div className={'flex flex-row gap-2 justify-center pb-2'}>
+                    <img src={'nextjs_full.png'} className={'h-auto w-24'} alt={'nextjs'}/>
+                    <img src={'netlify_full.png'} className={'h-auto w-24'} alt={'netlify'}/>
                 </div>
+                <p>This online resume was built using <b>Next.js</b> and is hosted on <b>Netlify</b>.</p>
+                <p>Design inspired by Supa Resume by <a href={'https://linktr.ee/angelolibero_designs'}
+                                                        className={'text-link'}>@angelolibero</a>, <a
+                    href={'https://www.figma.com/community/file/1087586245868299560/Supa-Resume---Light-%26-Dark-%5BFREE-Resume%2FCover-Letter%5D'}
+                    className={'text-link'}>available
+                    for free on Figma</a></p>
+                <p>You can find the complete source code on my GitHub repository. <a
+                    href={'https://github.com/michaelFrancisco/resume'} className={'text-link'}>Feel free to check
+                    it out!</a></p>
+            </div>
 
 
         </div>
